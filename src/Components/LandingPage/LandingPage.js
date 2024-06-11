@@ -1,9 +1,9 @@
 import React from "react"; // Importing React library for building UI components
 import { Link } from "react-router-dom"; // Importing Link component from react-router-dom for navigation
-import "./Landing_Page.css"; // Importing styles for Landing Page component
+import "./LandingPage.css"; // Importing styles for Landing Page component
 
 // Functional component for the Landing Page
-const Landing_Page = () => {
+const LandingPage = () => {
   return (
     <section className="hero-section"> {/* Hero section container */}
       <div>
@@ -18,12 +18,12 @@ const Landing_Page = () => {
               </span>
             </h1>
             
-            <div class="blob-cont"> {/* Container for blob shape */}
-                <div class="blue blob"></div> {/* Blue blob shape */}
+            <div className="blob-cont"> {/* Container for blob shape */}
+                <div className="blue blob"></div> {/* Blue blob shape */}
             </div>
             
-            <div class="blob-cont"> {/* Another container for blob shape */}
-                <div class="blue1 blob"></div> {/* Blue1 blob shape */}
+            <div className="blob-cont"> {/* Another container for blob shape */}
+                <div className="blue1 blob"></div> {/* Blue1 blob shape */}
             </div>
             
             <h4>
@@ -31,7 +31,7 @@ const Landing_Page = () => {
             </h4> {/* Description text for the Landing Page */}
             
             <a href="#services"> {/* Link to scroll down to services section */}
-              <button class="button">Get Started</button> {/* Button to navigate to services section */}
+              <button className="button">Get Started</button> {/* Button to navigate to services section */}
             </a>
             
         </div>
@@ -40,4 +40,4 @@ const Landing_Page = () => {
   );
 };
 
-export default Landing_Page; // Exporting Landing Page component as default
+export default LandingPage; // Exporting Landing Page component as default
