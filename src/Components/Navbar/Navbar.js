@@ -13,13 +13,13 @@ const Navbar = () => {
     <nav>
       <div className="nav__logo">
         <Link to="/">
-          StayHealthy
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="26"
-            width="26"
-            viewBox="0 0 1000 1000"
-            style={{ fill: "#3685fb" }}
+          StayHealthy 
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            height="26" 
+            width="26" 
+            viewBox="0 0 1000 1000" 
+            style={{ fill: "#3685fb" }}  // Corrected style prop
           >
             <title>Doctor With Stethoscope SVG icon</title>
             <g>
@@ -34,17 +34,17 @@ const Navbar = () => {
         <span>.</span>
       </div>
       <div className="nav__icon" onClick={handleClick}>
-        <i className={`fa ${isMenuOpen ? "fa-times" : "fa-bars"}`}></i>
+        <i className="fa fa-times fa fa-bars"></i>
       </div>
-      <ul className={`nav__links ${isMenuOpen ? "active" : ""}`}>
+      <ul className={`nav__links ${isMenuOpen ? 'active' : ''}`}>
         <li className="link">
-          <Link to="/landing">Home</Link>
+          <Link to="/LandingPage">Home</Link>
         </li>
         <li className="link">
           <Link to="/appointments">Appointments</Link>
         </li>
         <li className="link">
-          <Link to="/sign-up">
+          <Link to="/signup">
             <button className="btn1">Sign Up</button>
           </Link>
         </li>
