@@ -9,6 +9,23 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLogout = () => {
+    // Implement your logout functionality here
+    // For example, clear user authentication tokens, remove user data from storage, etc.
+    // After logout, you may redirect the user to the login page or any other appropriate page.
+  };
+
+  // Function to extract user name from email address
+  const extractUserName = (email) => {
+    return email.split("@")[0];
+  };
+
+  // Dummy user email (replace with actual user email)
+  const userEmail = "clari@gmail.com"; // Example email
+
+  // Extract user name from email
+  const userName = extractUserName(userEmail);
+
   return (
     <nav>
       <div className="nav__logo">
@@ -31,10 +48,7 @@ const Navbar = () => {
             </g>
           </svg>
         </Link>
-        <span>.</span>
-      </div>
-      <div className="nav__icon" onClick={handleClick}>
-        <i className="fa fa-times fa fa-bars"></i>
+        <span></span>
       </div>
       <ul className={`nav__links ${isMenuOpen ? 'active' : ''}`}>
         <li className="link">
@@ -43,17 +57,17 @@ const Navbar = () => {
         <li className="link">
           <Link to="/appointments">Appointments</Link>
         </li>
-        <li className="link">
-          <Link to="/signup">
-            <button className="btn1">Sign Up</button>
-          </Link>
+        <li className="welcome-message">
+          <strong>Welcome, {userName}</strong>
         </li>
+        {/* Add logout button */}
         <li className="link">
-          <Link to="/login">
-            <button className="btn1">Login</button>
-          </Link>
+          <button className="btn1" onClick={handleLogout}>Logout</button>
         </li>
       </ul>
+      <div className="nav__icon" onClick={handleClick}>
+        <i className="fa fa-times fa fa-bars"></i>
+      </div>
     </nav>
   );
 };
