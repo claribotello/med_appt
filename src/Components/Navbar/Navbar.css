@@ -56,7 +56,7 @@ nav {
   }
   
   .nav__logo span {
-    color: #3685fb;
+    color: #000000;
   }
   
   .nav__icon {
@@ -159,3 +159,6 @@ nav {
     color: white;
   }
   
+  .welcome-message {
+  margin-right: auto;
+}
