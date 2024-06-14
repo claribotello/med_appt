@@ -37,25 +37,6 @@ const Notification = ({ children }) => {
               <p className="appointment-card__message">
                 <strong>Doctor:</strong> {doctorData?.name}
               </p>
-              <p className="appointment-card+message">
-                 <strong>Speciality:</strong> {doctorData.speciality}
-              </p>
-              {appointmentData.map(appointment => (
-                  <div key={appointment.id}>
-                      <p className="appointment-card_message">
-                         <strong>Name:</strong> {appointment.name}
-                      </p>
-                      <p className="appointment-card_message">
-                        <strong>Phone Number:</strong> {appointment.phoneNumber}
-                      </p>
-                      <p className="appointment-card_message">
-                         <strong>Date of Apointment:</strong> {appointment.data}
-                      </p>
-                      <p className="appointment-card_message">
-                        <strong>Time Slot:</strong> {appointment.time}
-                      </p>
-                  </div>
-              ))}
             </div>
           </div>
         </>
