@@ -43,4 +43,4 @@ const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
     );
   };
 
-export default AppointmentFormIC
+export default AppointmentFormIC;
