@@ -52,10 +52,19 @@ const Navbar = () => {
       </div>
       <ul className={`nav__links ${isMenuOpen ? 'active' : ''}`}>
         <li className="link">
-          <Link to="/LandingPage">Home</Link>
+          <Link to="/landingpage">Home</Link>
         </li>
         <li className="link">
-          <Link to="/appointments">Appointments</Link>
+          <Link to="/search/doctors">Appointments</Link>
+        </li>
+        <li className="link">
+          <Link to="/healthblog">Health Blog</Link>
+        </li>
+        <li className="link">
+          <Link to="/instant-consultation">Instant Consultation</Link>
+        </li>
+         <li className="link">
+          <Link to="/reviews">Reviews</Link>
         </li>
         <li className="welcome-message">
           <strong>Welcome, {userName}</strong>

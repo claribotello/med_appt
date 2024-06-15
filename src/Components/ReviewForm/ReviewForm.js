@@ -10,13 +10,13 @@ const ReviewForm = () => {
     const reportData = [
         {
             serialNumber: 1,
-            doctorName: 'Dr. Ramesh',
+            doctorName: 'Dr. Jane Doe',
             doctorSpeciality: 'Cardiology',
 
         },
         {
             serialNumber: 2,
-            doctorName: 'Dr. Harini',
+            doctorName: 'Dr. John Smith',
             doctorSpeciality: 'Dermatology',
 
         },
@@ -48,7 +48,7 @@ const ReviewForm = () => {
             <table className="report-table">
                 <thead>
                     <tr>
-                        <th>S.No.</th>
+                        <th>Serial Number</th>
                         <th>Doctor Name</th>
                         <th>Doctor Specialty</th>
                         <th>Provide Feedback</th>

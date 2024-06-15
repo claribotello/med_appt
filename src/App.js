@@ -16,21 +16,22 @@ function App() {
     return (
       <div className="App">
         <BrowserRouter>
-          <Notification>
-          <Navbar />
-          <Routes>
-            <Route path="/landingpage" element={<LandingPage />} />
-            <Route path="/signup" element={<Sign_Up />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/instant-consultation" element={<InstantConsultation />} />
-            <Route path='/finddoctor' element={<FindDoctorSearch />} />
-            <Route path='/search/doctors' element={<BookingConsultation />} />
-            <Route path='/reviews' element={<ReviewForm />} />
-            <Route path='/profile' element={<ProfileForm />} />
-            <Route path='/reports' element={<ReportsLayout />} />
-          </Routes>
-          </Notification>
+            <Notification>
+                <Navbar />
+                <Routes>
+                    <Route path="/landingpage" element={<LandingPage />} />
+                    <Route path="/signup" element={<Sign_Up />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/instant-consultation" element={<InstantConsultation />} />
+                    <Route path='/finddoctor' element={<FindDoctorSearch />} />
+                    <Route path='/search/doctors' element={<BookingConsultation />} />
+                    <Route path='/reviews' element={<ReviewForm />} />
+                    <Route path='/profile' element={<ProfileForm />} />
+                    <Route path='/reports' element={<ReportsLayout />} />
+                </Routes>
+            </Notification>
         </BrowserRouter>
+
       </div>
     );
   }
