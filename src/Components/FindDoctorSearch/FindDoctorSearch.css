@@ -67,6 +67,9 @@
 
 }
 
+
+
+
 .doctor-search-box {
     display: flex;
     align-items: center;
@@ -76,7 +79,7 @@
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0,.1) 0 - 1px 0 0 inset;
     border-radius: 5px;
-    height: 100vh;
+    height: 50vh;
 }
 
 .doctor-search-box>img {
@@ -100,15 +103,20 @@
     border:1px solid rgb(59, 58, 58);
 }
 
-.findiconimg{
+.findiconimg {
+    position: relative;
+    top: -5px; /* Adjust the negative value to move it up */
     width: 40px;
-    left: 0;
+    height: 40px; /* Adjust the height as needed */
     background-color: rgb(239, 234, 234);
-    height: 40px;
     border: 1px solid rgb(59, 58, 58);
     z-index: -99;
-
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px; /* Adjust border radius as needed */
+    border-bottom-right-radius: 5px; /* Adjust border radius as needed */
 }
+
 .search-doctor-input-results {
     position: absolute;
     top: 55%;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './InstantConsultation.css';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import FindDoctorSearchIC from './FindDoctorSearchIC/FindDoctorSearchIC.js';
+import FindDoctorSearchIC from './FindDoctorSearchIC/FindDoctorSearchIC';
 import DoctorCardIC from './DoctorCardIC/DoctorCardIC';
 
 const InstantConsultation = () => {
@@ -82,4 +82,4 @@ const InstantConsultation = () => {
     )
 }
 
-export default InstantConsultation;
+export default InstantConsultation

@@ -1,16 +1,19 @@
 .appointment-card {
     position: fixed;
-    display: flex;
-    top: 40%;
-    left: 0;
-    background-color: #0b99ffaa;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #007BFF;
     color: white;
-    padding: 40px;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.appointment-card_content {
-    display: flex;
-    flex-direction: column;
+.appointment-card__title {
+    margin-top: 0;
+}
+
+.appointment-card__message {
+    margin: 5px 0;
 }
