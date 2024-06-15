@@ -136,8 +136,9 @@ const ProfileForm = () => {
             ) : (
                 <div className="profile-details">
                     <h2>Welcome, {userDetails.name}</h2>
-                    <p><b>Email:</b> {userDetails.email}</p>
+                    <p><b>Name:</b> {userDetails.name}</p>
                     <p><b>Phone:</b> {userDetails.phone}</p>
+                    <p><b>Email:</b> {userDetails.email}</p>
                     <button onClick={handleEdit}>Edit</button>
                 </div>
             )}
