@@ -24,7 +24,7 @@ const LandingPage = () => {
                         <div class="blue1 blob"></div>
                     </div>
                     <h4>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae ducimus. Suscipit omnis quibusdam non cum rem voluptatem!
+                        Welcome to our Stay Healthy Website! Make an appointment with your doctor today! 
                     </h4>
                     <a href="#services">
                         <button class="button">Get Started</button>

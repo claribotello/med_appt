@@ -11,7 +11,7 @@ const ProfileForm = () => {
     useEffect(() => {
         const authtoken = sessionStorage.getItem("auth-token");
         if (!authtoken) {
-            navigate("/login");
+            navigate("/profile");
         } else {
             fetchUserProfile();
         }
@@ -23,7 +23,7 @@ const ProfileForm = () => {
             const email = sessionStorage.getItem("email"); // Get the email from session storage
 
             if (!authtoken) {
-                navigate("/login");
+                navigate("/profile");
             } else {
                 const response = await fetch(`${API_URL}/api/auth/user`, {
                     headers: {
@@ -64,7 +64,7 @@ const ProfileForm = () => {
             const email = sessionStorage.getItem("email"); // Get the email from session storage
 
             if (!authtoken || !email) {
-                navigate("/login");
+                navigate("/profile");
                 return;
             }
 
@@ -103,18 +103,9 @@ const ProfileForm = () => {
         <div className="profile-container">
             {editMode ? (
                 <form onSubmit={handleSubmit}>
-                    <label>
-                        Email
-                        <input
-                            type="email"
-                            name="email"
-                            value={userDetails.email}
-                            disabled // Disable the email field
-                        />
-                    </label>
 
                     <label>
-                        Name
+                        Name:
                         <input
                             type="text"
                             name="name"
@@ -123,11 +114,20 @@ const ProfileForm = () => {
                         />
                     </label>
                     <label>
-                        Phone
+                        Phone:
                         <input
                             type="text"
                             name="phone"
                             value={updatedDetails.phone}
+                            onChange={handleInputChange}
+                        />
+                    </label>
+                     <label>
+                        Email:
+                        <input
+                            type="text"
+                            name="email"
+                            value={updatedDetails.email}
                             onChange={handleInputChange}
                         />
                     </label>
