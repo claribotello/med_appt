@@ -6,19 +6,18 @@ import "./ReviewForm.css"
 
 const ReviewForm = () => {
     const [reviewData, setReviewData] = useState({});
+    const [disableReview, setDisableReview] = useState({}); // State to manage disable review status
 
     const reportData = [
         {
             serialNumber: 1,
             doctorName: 'Dr. Jane Doe',
             doctorSpeciality: 'Cardiology',
-
         },
         {
             serialNumber: 2,
             doctorName: 'Dr. John Smith',
             doctorSpeciality: 'Dermatology',
-
         },
     ];
 
@@ -35,13 +34,20 @@ const ReviewForm = () => {
             [serialNumber]: review
         }));
     };
+
+    const disableReviewAction = (serialNumber) => {
+        // Implement any logic here to handle disabling the review
+        setDisableReview((prevDisable) => ({
+            ...prevDisable,
+            [serialNumber]: true
+        }));
+    };
+
     const navigate = useNavigate();
     useEffect(() => {
-        //   const authtoken = sessionStorage.getItem("auth-token");
-        //   if (!authtoken) {
-        //       navigate("/login");
-        //   }
-    }, [])
+        // Handle any initial setup or checks on component mount
+    }, []);
+
     return (
         <div style={{ marginTop: '10%' }} className="reviews-container">
             <h1>Reviews</h1>
@@ -95,10 +101,16 @@ const ReviewForm = () => {
                                 )}
                             </td>
                             <td>
-                                {reviewData[report.serialNumber] && (
-                                    <div className="review-given">
-                                        <p>{reviewData[report.serialNumber]}</p>
-                                    </div>
+                                {!disableReview[report.serialNumber] && (
+                                    <button
+                                        className="disable-review-button"
+                                        onClick={() => disableReviewAction(report.serialNumber)}
+                                    >
+                                        Disable Review
+                                    </button>
+                                )}
+                                {disableReview[report.serialNumber] && (
+                                    <span className="disabled-label">Review Disabled</span>
                                 )}
                             </td>
                         </tr>

@@ -1,20 +1,24 @@
 .reviews-container {
- margin: 10%;
- padding: 20px;   
-}
-th {
-    padding: 10px;
-    background-color: lightgray;
-}
-.report-table {
-    width: 80%;
-}
+    margin: 10%;
+    padding: 20px;   
+   }
+   th {
+       padding: 10px;
+       background-color: lightgray;
+   }
+   .report-table {
+       width: 80%;
+   }
 
-.review-given {
-    border: 2px solid red;
-    padding: 5px;
-    border-radius: 5px;
+   .disable-review-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
 }
-.review-given p {
-    margin: 0;
+.disabled-label {
+    color: gray;
+    font-style: italic;
 }
