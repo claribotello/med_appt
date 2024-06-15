@@ -7,20 +7,20 @@ const ReportsLayout = () => {
     useEffect(() => {
         const authtoken = sessionStorage.getItem("auth-token");
         if (!authtoken) {
-            navigate("/login");
+            navigate("/reports");
         }
     }, []);
     // Sample report data 
     const reportData = [
         {
             serialNumber: 1,
-            doctorName: 'Dr. Ramesh',
+            doctorName: 'Dr. Jane Doe',
             doctorSpeciality: 'Cardiology',
         },
 
         {
             serialNumber: 2,
-            doctorName: 'Dr. Harini',
+            doctorName: 'Dr. John Smith',
             doctorSpeciality: 'Dermatology',
         },
 
@@ -34,7 +34,7 @@ const ReportsLayout = () => {
             <table className="report-table">
                 <thead>
                     <tr>
-                        <th>S.No.</th>
+                        <th>Serial Number</th>
                         <th>Doctor Name</th>
                         <th>Doctor Specialty</th>
                         <th>View Report</th>
